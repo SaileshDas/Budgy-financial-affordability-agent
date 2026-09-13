@@ -1,0 +1,21 @@
+Budgy development transcript
+
+The solution was developed and audited through the provided agent conversation.
+
+1. Inspected the problem statement and all supplied datasets.
+2. Implemented CSV loading, event normalization, exact dated direct FX,
+   deterministic message parsing, forecasting, payment-plan simulation,
+   output generation, and validation.
+3. Audited all supplied images and removed manually encoded production image
+   answers after compliance review.
+4. Added dynamic image metadata/path discovery and an optional extractor
+   interface with safe unresolved fallback.
+5. Removed output.csv from required production inputs.
+6. Ran the final deterministic pipeline and independent output validation.
+
+Final execution facts:
+- No LLM, VLM, API, network service, or external financial data was used.
+- The local environment had Pillow but no OCR backend or executable.
+- Image paths were dynamically discovered and opened; image-derived amounts
+  remained unresolved when no reliable extractor was available.
+- The financial decision engine remained deterministic and safety-validated.
